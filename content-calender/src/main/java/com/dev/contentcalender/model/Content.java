@@ -12,6 +12,17 @@ public class Content {
     LocalDateTime dateUpdated;
     String url;
 
+    public Content(Integer id, String title, String desc, Status status, Type contentType, LocalDateTime dateCreated, LocalDateTime dateUpdated, String url) {
+        this.id = id;
+        this.title = title;
+        this.desc = desc;
+        this.status = status;
+        this.contentType = contentType;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.url = url;
+    }
+
     public Integer getId() {
         return id;
     }
