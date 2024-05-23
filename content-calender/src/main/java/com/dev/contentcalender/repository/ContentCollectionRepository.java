@@ -39,6 +39,7 @@ public class ContentCollectionRepository {
     }
 
     public void save(Content content) {
+       contentList.removeIf(c->c.getId().equals(content.getId()));
         contentList.add(content);
     }
 
