@@ -29,4 +29,8 @@ public class ContentController {
     public Content findById(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(()->new ResponseStatusException((HttpStatus.NOT_FOUND),"Content not found"));
     }
+
+    public void create(Content content){
+        repository.save();
+    }
 }
