@@ -47,4 +47,8 @@ public class ContentCollectionRepository {
         return contentList.stream().filter(c -> c.getId().equals(id)).count()==1;
 
     }
+
+    public void delete(Integer id) {
+        contentList.removeIf(c->c.getId().equals(id));
+    }
 }
